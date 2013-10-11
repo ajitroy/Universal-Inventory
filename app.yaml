@@ -1,0 +1,33 @@
+application: universal-inventory
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /assets
+  static_dir: assets
+
+- url: /newassets
+  static_dir: newassets
+
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /statichtmls
+  static_dir: statichtmls
+
+- url: .*
+  script: main.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"

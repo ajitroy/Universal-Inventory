@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+        <meta name="author" content="Universal Inventory">
+        <title>Universal Inventory</title>
+        <link rel="stylesheet" href="../newassets/bootstrap.min.css">
+        <link rel="stylesheet" href="../newassets/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="../newassets/univ.css">
+        <script src="../js/jquery.min.js"></script>
+        <!-- Optional theme -->
+        <!--link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"-->
+        <style media="screen">article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio:not([controls]) {display:none}html{font-size:100%}a:focus{outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}a:hover,a:active{outline:0px}img{max-width:100%;height:auto;vertical-align:middle;border:0px}button,input,select,textarea{margin:0px;font-size:100%;vertical-align:middle}button,input{line-height:normal}button::-moz-focus-inner,input::-moz-focus-inner{padding:0px;border:0px}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}label,select,button,input[type="button"],input[type="reset"],input[type="submit"],input[type="radio"],input[type="checkbox"]{cursor:pointer}input[type="search"]{box-sizing:content-box;-webkit-appearance:textfield}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}body{margin:0px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333;background-color:#fff}a{color:#08c;text-decoration:none}a:hover{color:#005580;text-decoration:underline}.row::before,.row::after{display:table;content:'';line-height:0}.row::after{clear:both}[class*="span"]{float:left;min-height:1px;margin-left:20px}.span12{width:940px}.span8{width:620px}.span6{width:460px}.span5{width:380px}.span4{width:300px}.span3{width:220px}.row-fluid{width:100%}.row-fluid::before,.row-fluid::after{display:table;content:'';line-height:0}.row-fluid::after{clear:both}.row-fluid [class*="span"]{display:block;width:100%;min-height:28px;box-sizing:border-box;float:left;margin-left:2.12766%}.row-fluid [class*="span"]:first-child{margin-left:0px}.row-fluid .span12{width:100%}.row-fluid .span8{width:65.95745%}.row-fluid .span6{width:48.93617%}.row-fluid .span5{width:40.42553%}.row-fluid .span4{width:31.91489%}.row-fluid .span3{width:23.40426%}.row-fluid .offset12:first-child{margin-left:102.12766%}.row-fluid .offset11:first-child{margin-left:93.61702%}.row-fluid .offset10:first-child{margin-left:85.10638%}.row-fluid .offset9:first-child{margin-left:76.59574%}.row-fluid .offset8:first-child{margin-left:68.08511%}.row-fluid .offset7:first-child{margin-left:59.57447%}.row-fluid .offset6:first-child{margin-left:51.06383%}.row-fluid .offset5:first-child{margin-left:42.55319%}.row-fluid .offset4:first-child{margin-left:34.04255%}.row-fluid .offset3:first-child{margin-left:25.53191%}.row-fluid .offset2:first-child{margin-left:17.02128%}.row-fluid .offset1:first-child{margin-left:8.51064%}.container::before,.container::after{display:table;content:'';line-height:0}.container::after{clear:both}.container-fluid{padding-right:20px;padding-left:20px}.container-fluid::before,.container-fluid::after{display:table;content:'';line-height:0}.container-fluid::after{clear:both}p{margin:0px 0px 9px}a.muted:hover{color:gray}a.text-warning:hover{color:#a47e3c}a.text-error:hover{color:#953b39}a.text-info:hover{color:#2d6987}a.text-success:hover{color:#356635}h1,h2,h3,h4,h5,h6{margin:9px 0px;font-family:inherit;font-weight:bold;line-height:18px;color:inherit;text-rendering:optimizelegibility}h1,h2,h3{line-height:36px}h1{font-size:35.75px}h2{font-size:29.25px}h4{font-size:16.25px}h5{font-size:13px}ul,ol{padding:0px;margin:0px 0px 9px 25px}ul ul,ul ol,ol ol,ol ul{margin-bottom:0px}li{line-height:18px}ul.inline,ol.inline{margin-left:0px;list-style:none}ul.inline>li,ol.inline>li{display:inline-block;padding-left:5px;padding-right:5px}.dl-horizontal::before,.dl-horizontal::after{display:table;content:'';line-height:0}.dl-horizontal::after{clear:both}blockquote small::before{content: — }blockquote.pull-right small::before{content:''}blockquote.pull-right small::after{content:  —}q::before,q::after,blockquote::before,blockquote::after{content:''}.table caption+thead tr:first-child th,.table caption+thead tr:first-child td,.table colgroup+thead tr:first-child th,.table colgroup+thead tr:first-child td,.table thead:first-child tr:first-child th,.table thead:first-child tr:first-child td{border-top-width:0px}.table-bordered caption+thead tr:first-child th,.table-bordered caption+tbody tr:first-child th,.table-bordered caption+tbody tr:first-child td,.table-bordered colgroup+thead tr:first-child th,.table-bordered colgroup+tbody tr:first-child th,.table-bordered colgroup+tbody tr:first-child td,.table-bordered thead:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child td{border-top-width:0px}.table-bordered thead:first-child tr:first-child>th:first-child,.table-bordered tbody:first-child tr:first-child>td:first-child{border-top-left-radius:4px}.table-bordered thead:first-child tr:first-child>th:last-child,.table-bordered tbody:first-child tr:first-child>td:last-child{border-top-right-radius:4px}.table-bordered thead:last-child tr:last-child>th:first-child,.table-bordered tbody:last-child tr:last-child>td:first-child,.table-bordered tfoot:last-child tr:last-child>td:first-child{border-bottom-left-radius:4px}.table-bordered thead:last-child tr:last-child>th:last-child,.table-bordered tbody:last-child tr:last-child>td:last-child,.table-bordered tfoot:last-child tr:last-child>td:last-child{border-bottom-right-radius:4px}.table-bordered tfoot+tbody:last-child tr:last-child td:first-child{border-bottom-left-radius:0px}.table-bordered tfoot+tbody:last-child tr:last-child td:last-child{border-bottom-right-radius:0px}.table-bordered caption+thead tr:first-child th:first-child,.table-bordered caption+tbody tr:first-child td:first-child,.table-bordered colgroup+thead tr:first-child th:first-child,.table-bordered colgroup+tbody tr:first-child td:first-child{border-top-left-radius:4px}.table-bordered caption+thead tr:first-child th:last-child,.table-bordered caption+tbody tr:first-child td:last-child,.table-bordered colgroup+thead tr:first-child th:last-child,.table-bordered colgroup+tbody tr:first-child td:last-child{border-top-right-radius:4px}.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {background-color:#f9f9f9}.table-hover tbody tr:hover td,.table-hover tbody tr:hover th{background-color:#f5f5f5}.table-hover tbody tr.success:hover td{background-color:#d0e9c6}.table-hover tbody tr.error:hover td{background-color:#ebcccc}.table-hover tbody tr.warning:hover td{background-color:#faf2cc}.table-hover tbody tr.info:hover td{background-color:#c4e3f3}[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;line-height:14px;vertical-align:text-top;background-image:url(https://3-ps.googleusercontent.com/sx/www.alarmgrid.com/d1unzhqf5a606m.cloudfront.net/assets/glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png.pagespeed.ce.hPYTYxsH1P.png);margin-top:1px;background-position:14px 14px;background-repeat:no-repeat no-repeat}.icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"]{background-image:url(https://4-ps.googleusercontent.com/sx/www.alarmgrid.com/d1unzhqf5a606m.cloudfront.net/assets/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png.pagespeed.ce.olxHBTIP1j.png)}.icon-search{background-position:-48px 0px}.dropup,.dropdown{position:relative}.dropdown-toggle{}.dropdown-toggle:active,.open .dropdown-toggle{outline:0px}.caret{display:inline-block;width:0px;height:0px;vertical-align:top;border-top-width:4px;border-top-style:solid;border-top-color:#000;border-right-width:4px;border-right-style:solid;border-right-color:transparent;border-left-width:4px;border-left-style:solid;border-left-color:transparent;content:''}.dropdown .caret{margin-top:8px;margin-left:2px}.dropdown-menu{position:absolute;top:100%;left:0px;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0px;margin:2px 0px 0px;list-style:none;background-color:#fff;border:1px solid rgba(0,0,0,.2);border-top-left-radius:6px;border-top-right-radius:6px;border-bottom-right-radius:6px;border-bottom-left-radius:6px;-webkit-box-shadow:rgba(0,0,0,.2) 0px 5px 10px;box-shadow:rgba(0,0,0,.2) 0px 5px 10px;-webkit-background-clip:padding-box;background-clip:padding-box}.dropdown-menu li>a{display:block;padding:3px 20px;clear:both;font-weight:normal;line-height:18px;color:#333;white-space:nowrap}.dropdown-menu li>a:hover,.dropdown-menu li>a:focus,.dropdown-submenu:hover>a{text-decoration:none;color:#fff;background-color:#0081c2;background-image:-webkit-linear-gradient(top,#08c,#0077b3);background-repeat:repeat no-repeat}.dropdown-menu .active>a,.dropdown-menu .active>a:hover{color:#333;text-decoration:none;outline:0px;background-color:#0081c2;background-image:-webkit-linear-gradient(top,#08c,#0077b3);background-repeat:repeat no-repeat}.dropdown-menu .disabled>a,.dropdown-menu .disabled>a:hover{color:#999}.dropdown-menu .disabled>a:hover{text-decoration:none;background-color:transparent;background-image:none;cursor:default}.dropdown-submenu:hover>.dropdown-menu{display:block}.dropdown-submenu>a::after{display:block;content:' ';float:right;width:0px;height:0px;border-color:transparent transparent transparent #ccc;border-style:solid;border-width:5px 0px 5px 5px;margin-top:5px;margin-right:-10px}.dropdown-submenu:hover>a::after{border-left-color:#fff}.collapse{position:relative;height:0px;overflow:hidden;-webkit-transition:height .35s ease}.btn{display:inline-block;padding:4px 12px;margin-bottom:0px;font-size:13px;line-height:18px;text-align:center;vertical-align:middle;cursor:pointer;color:#333;text-shadow:rgba(255,255,255,.74902) 0px 1px 1px;background-color:#f5f5f5;background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);border-width:1px;border-style:solid;border-color:#bbb #bbb #a2a2a2;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-bottom-left-radius:4px;-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;background-repeat:repeat no-repeat}.btn:hover,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#333;background-color:#e6e6e6}.btn:active,.btn.active{}.btn:first-child{}.btn:hover{color:#333;text-decoration:none;-webkit-transition:background-position .1s linear;background-position:0px -15px}.btn:focus{outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}.btn.active,.btn:active{background-image:none;outline:0px;-webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px}.btn-large{padding:11px 19px;font-size:16.25px;border-top-left-radius:6px;border-top-right-radius:6px;border-bottom-right-radius:6px;border-bottom-left-radius:6px}.btn-block{display:block;width:100%;padding-left:0px;padding-right:0px;box-sizing:border-box}.btn{border-color:rgba(0,0,0,.14902) rgba(0,0,0,.14902) rgba(0,0,0,.247059)}.btn-primary{color:#fff;text-shadow:rgba(0,0,0,.247059) 0px -1px 0px;background-color:#006ccc;background-image:-webkit-linear-gradient(top,#08c,#04c);border-color:rgba(0,0,0,.0980392) rgba(0,0,0,.0980392) rgba(0,0,0,.247059);background-repeat:repeat no-repeat}.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#fff;background-color:#04c}.btn-primary:active,.btn-primary.active{}.btn-warning:hover,.btn-warning:active,.btn-warning.active,.btn-warning.disabled,.btn-warning[disabled]{color:#fff;background-color:#f89406}.btn-warning:active,.btn-warning.active{}.btn-danger:hover,.btn-danger:active,.btn-danger.active,.btn-danger.disabled,.btn-danger[disabled]{color:#fff;background-color:#bd362f}.btn-danger:active,.btn-danger.active{}.btn-success:hover,.btn-success:active,.btn-success.active,.btn-success.disabled,.btn-success[disabled]{color:#fff;background-color:#51a351}.btn-success:active,.btn-success.active{}.btn-info:hover,.btn-info:active,.btn-info.active,.btn-info.disabled,.btn-info[disabled]{color:#fff;background-color:#2f96b4}.btn-info:active,.btn-info.active{}.btn-inverse:hover,.btn-inverse:active,.btn-inverse.active,.btn-inverse.disabled,.btn-inverse[disabled]{color:#fff;background-color:#222}.btn-inverse:active,.btn-inverse.active{}button.btn,input[type="submit"].btn{}button.btn::-moz-focus-inner,input[type="submit"].btn::-moz-focus-inner{padding:0px;border:0px}.btn-link,.btn-link:active,.btn-link[disabled]{background-color:transparent;background-image:none;-webkit-box-shadow:none;box-shadow:none}.btn-link:hover{color:#005580;text-decoration:underline;background-color:transparent}.btn-link[disabled]:hover{color:#333;text-decoration:none}.nav{margin-left:0px;margin-bottom:18px;list-style:none}.nav>li>a{display:block}.nav>li>a:hover{text-decoration:none;background-color:#eee}.nav-list>.active>a,.nav-list>.active>a:hover{color:#fff;text-shadow:rgba(0,0,0,.2) 0px -1px 0px;background-color:#08c}.nav-tabs::before,.nav-tabs::after,.nav-pills::before,.nav-pills::after{display:table;content:'';line-height:0}.nav-tabs::after,.nav-pills::after{clear:both}.nav-tabs>li>a:hover{border-color:#eee #eee #ddd}.nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:#555;background-color:#fff;border-width:1px;border-style:solid;border-color:#ddd #ddd transparent;cursor:default}.nav-pills>.active>a,.nav-pills>.active>a:hover{color:#fff;background-color:#08c}.nav-tabs.nav-stacked>li:first-child>a{border-top-right-radius:4px;border-top-left-radius:4px}.nav-tabs.nav-stacked>li:last-child>a{border-bottom-right-radius:4px;border-bottom-left-radius:4px}.nav-tabs.nav-stacked>li>a:hover{border-color:#ddd;z-index:2}.nav-pills.nav-stacked>li:last-child>a{margin-bottom:1px}.nav .dropdown-toggle .caret{border-top-color:#08c;border-bottom-color:#08c;margin-top:6px}.nav .dropdown-toggle:hover .caret{border-top-color:#005580;border-bottom-color:#005580}.nav>.dropdown.active>a:hover{cursor:pointer}.nav-tabs .open .dropdown-toggle,.nav-pills .open .dropdown-toggle,.nav>li.dropdown.open.active>a:hover{color:#fff;background-color:#999;border-color:#999}.nav li.dropdown.open .caret,.nav li.dropdown.open.active .caret,.nav li.dropdown.open a:hover .caret{border-top-color:#fff;border-bottom-color:#fff;opacity:1}.tabs-stacked .open>a:hover{border-color:#999}.tabbable::before,.tabbable::after{display:table;content:'';line-height:0}.tabbable::after{clear:both}.tabs-below>.nav-tabs>li>a:hover{border-bottom-color:transparent;border-top-color:#ddd}.tabs-below>.nav-tabs>.active>a,.tabs-below>.nav-tabs>.active>a:hover{border-color:transparent #ddd #ddd}.tabs-left>.nav-tabs>li>a:hover{border-color:#eee #ddd #eee #eee}.tabs-left>.nav-tabs .active>a,.tabs-left>.nav-tabs .active>a:hover{border-color:#ddd transparent #ddd #ddd}.tabs-right>.nav-tabs>li>a:hover{border-color:#eee #eee #eee #ddd}.tabs-right>.nav-tabs .active>a,.tabs-right>.nav-tabs .active>a:hover{border-color:#ddd #ddd #ddd transparent}.nav>.disabled>a:hover{text-decoration:none;background-color:transparent;cursor:default}.navbar{overflow:visible;margin-bottom:18px}.navbar-inner{min-height:40px;padding-left:20px;padding-right:20px;background-color:#205f97;background-image:-webkit-linear-gradient(top,#224484,#1f88b5);border:1px solid #166181;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-bottom-left-radius:4px;-webkit-box-shadow:rgba(0,0,0,.0627451) 0px 1px 4px;box-shadow:rgba(0,0,0,.0627451) 0px 1px 4px;background-repeat:repeat no-repeat}.navbar-inner::before,.navbar-inner::after{display:table;content:'';line-height:0}.navbar-inner::after{clear:both}.nav-collapse.collapse{height:auto;overflow:visible}.navbar .brand:hover{text-decoration:none}.navbar-link:hover{color:#fff}.navbar .divider-vertical{height:40px;margin:0px 9px;border-left-width:1px;border-left-style:solid;border-left-color:#1f88b5;border-right-width:1px;border-right-style:solid;border-right-color:#224484}.navbar .btn,.navbar .btn-group{margin-top:5px}.navbar-form{margin-bottom:0px}.navbar-form::before,.navbar-form::after{display:table;content:'';line-height:0}.navbar-form::after{clear:both}.navbar-form input,.navbar-form select,.navbar-form .radio,.navbar-form .checkbox{margin-top:5px}.navbar-form input,.navbar-form select,.navbar-form .btn{display:inline-block;margin-bottom:0px}.navbar .nav{position:relative;left:0px;display:block;float:left;margin:0px 10px 0px 0px}.navbar .nav>li{float:left}.navbar .nav>li>a{float:none;padding:11px 15px;color:#fff;text-decoration:none;text-shadow:#224484 0px 1px 0px}.navbar .nav .dropdown-toggle .caret{margin-top:8px}.navbar .nav>li>a:focus,.navbar .nav>li>a:hover{background-color:#1f88b5;color:#fff;text-decoration:none}.navbar .nav>.active>a,.navbar .nav>.active>a:hover,.navbar .nav>.active>a:focus{color:#fff;text-decoration:none;background-color:#1b789f;-webkit-box-shadow:rgba(0,0,0,.121569) 0px 3px 8px inset;box-shadow:rgba(0,0,0,.121569) 0px 3px 8px inset}.navbar .btn-navbar{display:none;float:right;padding:7px 10px;margin-left:5px;margin-right:5px;color:#fff;text-shadow:rgba(0,0,0,.247059) 0px -1px 0px;background-color:#1c5282;background-image:-webkit-linear-gradient(top,#1d3a70,#1b789f);border-color:rgba(0,0,0,.0980392) rgba(0,0,0,.0980392) rgba(0,0,0,.247059);-webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px;box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px;background-repeat:repeat no-repeat}.navbar .btn-navbar:hover,.navbar .btn-navbar:active,.navbar .btn-navbar.active,.navbar .btn-navbar.disabled,.navbar .btn-navbar[disabled]{color:#fff;background-color:#1b789f}.navbar .btn-navbar:active,.navbar .btn-navbar.active{}.navbar .btn-navbar .icon-bar{display:block;width:18px;height:2px;background-color:#f5f5f5;border-top-left-radius:1px;border-top-right-radius:1px;border-bottom-right-radius:1px;border-bottom-left-radius:1px;-webkit-box-shadow:rgba(0,0,0,.247059) 0px 1px 0px;box-shadow:rgba(0,0,0,.247059) 0px 1px 0px}.btn-navbar .icon-bar+.icon-bar{margin-top:3px}.navbar .nav>li>.dropdown-menu::before{content:'';display:inline-block;border-left-width:7px;border-left-style:solid;border-left-color:transparent;border-right-width:7px;border-right-style:solid;border-right-color:transparent;border-bottom-width:7px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.2);position:absolute;top:-7px;left:9px}.navbar .nav>li>.dropdown-menu::after{content:'';display:inline-block;border-left-width:6px;border-left-style:solid;border-left-color:transparent;border-right-width:6px;border-right-style:solid;border-right-color:transparent;border-bottom-width:6px;border-bottom-style:solid;border-bottom-color:#fff;position:absolute;top:-6px;left:10px}.navbar-fixed-bottom .nav>li>.dropdown-menu::before{border-top-width:7px;border-top-style:solid;border-top-color:rgba(0,0,0,.2);border-bottom-width:0px;bottom:-7px;top:auto}.navbar-fixed-bottom .nav>li>.dropdown-menu::after{border-top-width:6px;border-top-style:solid;border-top-color:#fff;border-bottom-width:0px;bottom:-6px;top:auto}.navbar .nav li.dropdown>a:hover .caret{border-top-color:#fff;border-bottom-color:#fff}.navbar .nav li.dropdown>.dropdown-toggle .caret{border-top-color:#fff;border-bottom-color:#fff}.navbar .pull-right>li>.dropdown-menu::before,.navbar .nav>li>.dropdown-menu.pull-right::before{left:auto;right:12px}.navbar .pull-right>li>.dropdown-menu::after,.navbar .nav>li>.dropdown-menu.pull-right::after{left:auto;right:13px}.navbar-inverse .brand:hover,.navbar-inverse .nav>li>a:hover{color:#fff}.navbar-inverse .nav>li>a:focus,.navbar-inverse .nav>li>a:hover{background-color:transparent;color:#fff}.navbar-inverse .nav .active>a,.navbar-inverse .nav .active>a:hover,.navbar-inverse .nav .active>a:focus{color:#fff;background-color:#111}.navbar-inverse .navbar-link:hover{color:#fff}.navbar-inverse .nav li.dropdown>a:hover .caret{border-top-color:#fff;color:#fff}.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder{color:#ccc}.navbar-inverse .navbar-search .search-query:focus,.navbar-inverse .navbar-search .search-query.focused{padding:5px 15px;color:#333;text-shadow:#fff 0px 1px 0px;background-color:#fff;border:0px;-webkit-box-shadow:rgba(0,0,0,.14902) 0px 0px 3px;box-shadow:rgba(0,0,0,.14902) 0px 0px 3px;outline:0px}.navbar-inverse .btn-navbar:hover,.navbar-inverse .btn-navbar:active,.navbar-inverse .btn-navbar.active,.navbar-inverse .btn-navbar.disabled,.navbar-inverse .btn-navbar[disabled]{color:#fff;background-color:#040404}.navbar-inverse .btn-navbar:active,.navbar-inverse .btn-navbar.active{}.pagination ul>li>a:hover,.pagination ul>.active>a,.pagination ul>.active>span{background-color:#f5f5f5}.pagination ul>.disabled>span,.pagination ul>.disabled>a,.pagination ul>.disabled>a:hover{color:#999;background-color:transparent;cursor:default}.pagination ul>li:first-child>a,.pagination ul>li:first-child>span{border-left-width:1px;border-top-left-radius:4px;border-bottom-left-radius:4px}.pagination ul>li:last-child>a,.pagination ul>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination-large ul>li:first-child>a,.pagination-large ul>li:first-child>span{border-top-left-radius:6px;border-bottom-left-radius:6px}.pagination-large ul>li:last-child>a,.pagination-large ul>li:last-child>span{border-top-right-radius:6px;border-bottom-right-radius:6px}.pagination-mini ul>li:first-child>a,.pagination-mini ul>li:first-child>span,.pagination-small ul>li:first-child>a,.pagination-small ul>li:first-child>span{border-top-left-radius:3px;border-bottom-left-radius:3px}.pagination-mini ul>li:last-child>a,.pagination-mini ul>li:last-child>span,.pagination-small ul>li:last-child>a,.pagination-small ul>li:last-child>span{border-top-right-radius:3px;border-bottom-right-radius:3px}.thumbnails{margin-left:-20px;list-style:none}.thumbnails::before,.thumbnails::after{display:table;content:'';line-height:0}.thumbnails::after{clear:both}.row-fluid .thumbnails{margin-left:0px}.thumbnails>li{float:left;margin-bottom:18px;margin-left:20px}.thumbnail{display:block;padding:4px;line-height:18px;border:1px solid #ddd;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-bottom-left-radius:4px;-webkit-box-shadow:rgba(0,0,0,.054902) 0px 1px 3px;box-shadow:rgba(0,0,0,.054902) 0px 1px 3px;-webkit-transition:all .2s ease-in-out}a.thumbnail:hover{border-color:#08c;-webkit-box-shadow:rgba(0,105,214,.247059) 0px 1px 4px;box-shadow:rgba(0,105,214,.247059) 0px 1px 4px}.media:first-child{margin-top:0px}.pull-right{float:right}.clearfix::before,.clearfix::after{display:table;content:'';line-height:0}.clearfix::after{clear:both}@media (max-width:979px) and (min-width:768px){.row::before,.row::after{display:table;content:'';line-height:0}.row::after{clear:both}[class*="span"]{float:left;min-height:1px;margin-left:20px}.span12{width:724px}.span8{width:476px}.span6{width:352px}.span5{width:290px}.span4{width:228px}.span3{width:166px}.row-fluid{width:100%}.row-fluid::before,.row-fluid::after{display:table;content:'';line-height:0}.row-fluid::after{clear:both}.row-fluid [class*="span"]{display:block;width:100%;min-height:28px;box-sizing:border-box;float:left;margin-left:2.76243%}.row-fluid [class*="span"]:first-child{margin-left:0px}.row-fluid .span12{width:100%}.row-fluid .span8{width:65.74586%}.row-fluid .span6{width:48.61878%}.row-fluid .span5{width:40.05525%}.row-fluid .span4{width:31.49171%}.row-fluid .span3{width:22.92818%}.row-fluid .offset12:first-child{margin-left:102.76243%}.row-fluid .offset11:first-child{margin-left:94.1989%}.row-fluid .offset10:first-child{margin-left:85.63536%}.row-fluid .offset9:first-child{margin-left:77.07182%}.row-fluid .offset8:first-child{margin-left:68.50829%}.row-fluid .offset7:first-child{margin-left:59.94475%}.row-fluid .offset6:first-child{margin-left:51.38122%}.row-fluid .offset5:first-child{margin-left:42.81768%}.row-fluid .offset4:first-child{margin-left:34.25414%}.row-fluid .offset3:first-child{margin-left:25.69061%}.row-fluid .offset2:first-child{margin-left:17.12707%}.row-fluid .offset1:first-child{margin-left:8.56354%}input,textarea,.uneditable-input{margin-left:0px}}@media (max-width:767px){body{padding-left:20px;padding-right:20px}.container-fluid{padding:0px}.row-fluid{width:100%}.row,.thumbnails{margin-left:0px}.thumbnails>li{float:none;margin-left:0px}[class*="span"],.uneditable-input[class*="span"],.row-fluid [class*="span"]{float:none;display:block;width:100%;margin-left:0px;box-sizing:border-box}.span12,.row-fluid .span12{width:100%;box-sizing:border-box}.row-fluid [class*="offset"]:first-child{margin-left:0px}}@media (max-width:480px){.nav-collapse{-webkit-transform:translate3d(0px,0px,0px)}}@media (max-width:979px){body{padding-top:0px}.nav-collapse{clear:both}.nav-collapse .nav{float:none;margin:0px 0px 9px}.nav-collapse .nav>li{float:none}.nav-collapse .nav>li>a{margin-bottom:2px}.nav-collapse .nav>.divider-vertical{display:none}.nav-collapse .nav>li>a,.nav-collapse .dropdown-menu a{padding:9px 15px;font-weight:bold;color:#fff;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px}.nav-collapse .btn{padding:4px 10px;font-weight:normal;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-bottom-left-radius:4px}.nav-collapse .dropdown-menu li+li a{margin-bottom:2px}.nav-collapse .nav>li>a:hover,.nav-collapse .dropdown-menu a:hover{background-color:#1f88b5}.navbar-inverse .nav-collapse .nav>li>a:hover,.navbar-inverse .nav-collapse .dropdown-menu a:hover{background-color:#111}.nav-collapse .dropdown-menu{position:static;top:auto;left:auto;float:none;display:none;max-width:none;margin:0px 15px;padding:0px;background-color:transparent;border:none;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;-webkit-box-shadow:none;box-shadow:none}.nav-collapse .dropdown-menu::before,.nav-collapse .dropdown-menu::after{display:none}.nav-collapse .nav>li>.dropdown-menu::before,.nav-collapse .nav>li>.dropdown-menu::after{display:none}.nav-collapse .navbar-form,.nav-collapse .navbar-search{float:none;padding:9px 15px;margin:9px 0px;border-top-width:1px;border-top-style:solid;border-top-color:#1f88b5;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#1f88b5;-webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px;box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px}.nav-collapse,.nav-collapse.collapse{overflow:hidden;height:0px}.navbar .btn-navbar{display:block}}@media (min-width:980px){.nav-collapse.collapse{height:auto!important;overflow:visible!important}}#footer-right{text-align:right}#toll_free{font-size:22px;padding-top:12px;line-height:30px;color:#0073ba;font-weight:bold;text-align:center}.btn,button,.button{display:inline-block;padding:4px 12px;margin-bottom:0px;font-size:14px;line-height:20px;text-align:center;vertical-align:middle;cursor:pointer;color:#333;text-shadow:rgba(255,255,255,.74902) 0px 1px 1px;background-color:#f5f5f5;background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);border-width:1px;border-style:solid;border-color:#bbb #bbb #a2a2a2;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-bottom-left-radius:4px;-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;background-repeat:repeat no-repeat}.btn:hover,button:hover,.button:hover,.btn:active,button:active,.button:active,.btn.active,button.active,.active.button,.btn.disabled,button.disabled,.disabled.button,.btn[disabled],button[disabled],[disabled].button{color:#333;background-color:#e6e6e6}.btn:active,button:active,.button:active,.btn.active,button.active,.active.button{}.btn:first-child,button:first-child,.button:first-child{}.btn:hover,button:hover,.button:hover{color:#333;text-decoration:none;-webkit-transition:background-position .1s linear;background-position:0px -15px}.btn:focus,button:focus,.button:focus{outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}.btn.active,button.active,.active.button,.btn:active,button:active,.button:active{background-image:none;outline:0px;-webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px}.btn-large,.large{padding:11px 19px;font-size:17.5px;border-top-left-radius:6px;border-top-right-radius:6px;border-bottom-right-radius:6px;border-bottom-left-radius:6px}.btn-block{display:block;width:100%;padding-left:0px;padding-right:0px;box-sizing:border-box}.btn,button,.button{border-color:rgba(0,0,0,.14902) rgba(0,0,0,.14902) rgba(0,0,0,.247059)}.btn-primary,.primary{color:#fff;text-shadow:rgba(0,0,0,.247059) 0px -1px 0px;background-color:#006ccc;background-image:-webkit-linear-gradient(top,#08c,#04c);border-color:rgba(0,0,0,.0980392) rgba(0,0,0,.0980392) rgba(0,0,0,.247059);background-repeat:repeat no-repeat}.btn-primary:hover,.primary:hover,.btn-primary:active,.primary:active,.btn-primary.active,.active.primary,.btn-primary.disabled,.disabled.primary,.btn-primary[disabled],[disabled].primary{color:#fff;background-color:#04c}.btn-primary:active,.primary:active,.btn-primary.active,.active.primary{}.btn-warning:hover,.btn-warning:active,.btn-warning.active,.btn-warning.disabled,.btn-warning[disabled]{color:#fff;background-color:#f89406}.btn-warning:active,.btn-warning.active{}.btn-danger:hover,.btn-danger:active,.btn-danger.active,.btn-danger.disabled,.btn-danger[disabled]{color:#fff;background-color:#bd362f}.btn-danger:active,.btn-danger.active{}.btn-success:hover,.btn-success:active,.btn-success.active,.btn-success.disabled,.btn-success[disabled]{color:#fff;background-color:#51a351}.btn-success:active,.btn-success.active{}.btn-info:hover,.btn-info:active,.btn-info.active,.btn-info.disabled,.btn-info[disabled]{color:#fff;background-color:#2f96b4}.btn-info:active,.btn-info.active{}.btn-inverse:hover,.btn-inverse:active,.btn-inverse.active,.btn-inverse.disabled,.btn-inverse[disabled]{color:#fff;background-color:#222}.btn-inverse:active,.btn-inverse.active{}button.btn,button,button.button,input[type="submit"].btn,input[type="submit"].button{}button.btn::-moz-focus-inner,button::-moz-focus-inner,button.button::-moz-focus-inner,input[type="submit"].btn::-moz-focus-inner,input[type="submit"].button::-moz-focus-inner{padding:0px;border:0px}.btn-link,.btn-link:active,.btn-link[disabled]{background-color:transparent;background-image:none;-webkit-box-shadow:none;box-shadow:none}.btn-link:hover{color:#005580;text-decoration:underline;background-color:transparent}.btn-link[disabled]:hover{color:#333;text-decoration:none}h1{margin-top:0px}#footer{padding:10px 0px;border-top-width:1px;border-top-style:solid;border-top-color:#ccc}#footer-pages ul{list-style:none}#home #left h2{font-size:20px;line-height:20px;margin:0px 0px 10px;padding:0px 0px 5px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#f2f2f2}#home #left .all{float:right;line-height:26px;margin-right: 10px;}#home #right .post{padding-top:10px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cdcdcd}#home #right .post h5{padding:0px;margin:0px}#home #right .post time{color:#ccc;margin-bottom:2px}#home #right .post:first-child{padding:0px}#home #right .post:last-child{border-bottom-style:none}#home #right>div{margin-top:10px;border:1px solid #cdcdcd;padding:10px}#home #right>div h4{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cdcdcd;margin:0px -10px 5px;padding:0px 5px 10px 10px;color:#223b76;font-size:16px;line-height:16px;font-weight:bold;text-transform:capitalize}#slider{background-color:#fff;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;border:1px solid #cecece;margin:0px 0px 10px}#slider img{border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}#slider .material{padding:20px}.installers li::before,.installers li::after{display:table;content:'';line-height:0}.installers li::after{clear:both}ul.inline li,ol.inline li{display:inline;list-style:none;padding:0px;margin:0px}.monitoring table thead tr th:first-child{background-color:#e8e8e8;color:#959595;text-align:left}.monitoring table tbody tr td:first-child{text-align:left;color:#737373;font-weight:bold;border-bottom-width:1px;border-bottom-style:dashed;border-bottom-color:#b8b8b8;background-color:#fff;border-right-width:1px;border-right-style:solid;border-right-color:#d1eff5}#navbar_row{margin-top:10px;margin-bottom:10px}.navbar{margin-bottom:0px}.navbar .first{margin-left:-10px}.navbar ul.nav>li>a{padding-left:22px;margin-left:-9px;margin-right:-9px;padding-right:22px}.navbar form{margin-right:-10px;margin-left:-10px}.navbar form input{width:150px;height:22px}#product_show #product-sidebar>div ul li:last-child{padding-bottom:0px}#products li,.product-listing li{margin-bottom:15px}#products .thumbnail,.product-listing .thumbnail{text-align:left}#products .thumbnail .short_name,.product-listing .thumbnail .short_name{font-size:16px;text-align:left;color:#2a4587;margin-top:4px}#products .thumbnail .name_description,.product-listing .thumbnail .name_description{color:#888;font-size:13px;margin-bottom:4px;min-height:25px}#products .thumbnail .list_price,.product-listing .thumbnail .list_price{color:#201919}#products .thumbnail .list_price .pricing,.product-listing .thumbnail .list_price .pricing{text-decoration:line-through}#products .thumbnail .our_price,.product-listing .thumbnail .our_price{color:#201919}#products .thumbnail .our_price .pricing,.product-listing .thumbnail .our_price .pricing{color:#900;font-size:16px}*::-moz-selection{background-color:#00adee;color:#fff;text-shadow:none;background-position:initial initial;background-repeat:initial initial}::selection{background-color:#00adee;color:#fff;text-shadow:none;background-position:initial initial;background-repeat:initial initial}a:link{}a{text-decoration:none;color:#00adee}a:hover{color:#08b}nav#top-nav-bar{text-align:right;margin-top:20px}nav#top-nav-bar ul li{margin-bottom:5px;padding-left:10px}nav#top-nav-bar ul li a{font-weight:bold;font-size:14px;text-transform:uppercase}nav #main-nav-bar li:first-child a{padding-left:0px}nav #main-nav-bar li#link-to-cart:hover{border-color:#00adee}nav #main-nav-bar li#link-to-cart:hover .amount{border-color:#00adee}span.price,#checkout-summary table tr[data-hook="item_total"] td:last-child strong,#checkout-summary table #summary-order-total,#order_details td.price span,#order_details td.total span,#order_summary td.price span,#order_summary td.total span,table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"],table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"],div[data-hook="inside_cart_form"] #subtotal span.order-total{font-weight:bold;color:#00adee}span.price.selling,#checkout-summary table tr[data-hook="item_total"] td:last-child strong.selling,#checkout-summary table .selling#summary-order-total,#order_details td.price span.selling,#order_details td.total span.selling,#order_summary td.price span.selling,#order_summary td.total span.selling,table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"],table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"],div[data-hook="inside_cart_form"] #subtotal span.selling.order-total{font-size:20px}span.price.diff,#checkout-summary table tr[data-hook="item_total"] td:last-child strong.diff,#checkout-summary table .diff#summary-order-total,#order_details td.price span.diff,#order_details td.total span.diff,#order_summary td.price span.diff,#order_summary td.total span.diff,table#cart-detail tbody#line_items tr td.diff[data-hook="cart_item_price"],table#cart-detail tbody#line_items tr td.diff[data-hook="cart_item_total"],div[data-hook="inside_cart_form"] #subtotal span.diff.order-total{font-weight:bold}#product-thumbnails li:hover,#product-thumbnails li.selected{border-color:#00adee}#cart-form #inside-product-cart-form::after{content:' ';display:block;clear:both;visibility:hidden;line-height:0;height:0px}.progress-steps li.completed-first:hover,.progress-steps li.completed:hover{background-color:#00adee;color:#fff}.progress-steps li.completed-first:hover a,.progress-steps li.completed:hover a{color:#fff}.progress-steps li.completed-first:hover a:hover,.progress-steps li.completed:hover a:hover{color:#fff!important}#order_details div:last-child,#order_summary div:last-child{margin-left:-1px}#order_details .steps-data div.columns:first-child,#order_summary .steps-data div.columns:first-child{margin-left:10px}table.order-summary tbody tr td:first-child a{text-transform:uppercase;font-weight:bold;color:#00adee}@media only screen and (max-width:767px){html{-webkit-text-size-adjust:none}#order_details .steps-data div.columns:first-child,#order_summary .steps-data div.columns:first-child{margin:0px}ul#nav-bar{text-align:center}}@media only screen and (max-width:767px) and (min-width:480px){input,select{vertical-align:baseline!important}#link-to-login{display:block;text-align:center}}@media only screen and (max-width:479px){#link-to-login{display:block;text-align:center}}#sidebar nav ul li a:hover{background-color:#f8f8f8;border-color:#f8f8f8;text-decoration:none}#sidebar nav ul li:last-child a,#sidebar nav ul b{border-bottom-right-radius:5px;border-bottom-left-radius:5px}.testimonials{list-style:none;margin:0px;padding:0px}.testimonials li::before,.testimonials li::after{display:table;content:'';line-height:0}.testimonials li::after{clear:both}.testimonials .quotee{text-align:right}.testimonials .quotee::before{content:'- '}body{background-image:url(../newassets/body_back.jpg);background-color:#f4f6f4;background-position:50% 0px;background-repeat:repeat repeat}#outter_wrapper{max-width:1020px;margin:0px auto;padding:0px 20px;}#body_wrapper{padding:20px 20px 0px;background-color:#fff;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;background-position:initial initial;background-repeat:initial initial}@media (max-width:767px){body{margin:0px;padding:0px}#logo{text-align:center}}#logo{margin:10px 0px 0px}h1,h2,h3,h4,h5,h6{color:#223b76}.container-fluid{padding-left:0px;padding-right:0px}a:hover .thumbnail,.thumbnail:hover{border-color:#08c;-webkit-box-shadow:rgba(0,105,214,.247059) 0px 1px 4px;box-shadow:rgba(0,105,214,.247059) 0px 1px 4px}.thumbnail a,a.thumbnail{text-decoration:none;text-align:center}#content ul.thumbnails li.span6:nth-child(2n+3), #sidebar ul.thumbnails li.span6:nth-child(2n+3) {margin-left:0px;clear:left}#content ul.thumbnails li.span4:nth-child(3n+4), #sidebar ul.thumbnails li.span4:nth-child(3n+4) {margin-left:0px;clear:left}#content ul.thumbnails li.span3:nth-child(4n+5), #sidebar ul.thumbnails li.span3:nth-child(4n+5) {margin-left:0px;clear:left}</style>
+
+    </head>
+    <body class="one-col" id="default" data-hook="body">
+        <div id="outter_wrapper">
+            <!--header id="header" data-hook="" class="row-fluid">
+                <div class="span5">
+                    <div itemscope="true" id="logo" itemtype="schema.org/Organization">
+                        <meta content="Universal Inventory" itemprop="name">
+                        <a href="/" itemprop="url"><img alt="Universal Inventory" itemprop="image" src="../assets/logo.jpg"></a>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div id="toll_free">
+                        Call us!
+                        <br>
+                        +91-991-636-7722
+                    </div>
+                </div>
+                <nav id="top-nav-bar" class="span4">
+                    <ul id="nav-bar" class="inline" data-hook="">
+                        <li id="link-to-login"><a href="/login">Logout</a></li>
+                    </ul>
+                </nav>
+            </header-->
+            <div class="row-fluid" id="navbar_row">
+                <div class="span12">
+                    <div class="navbar" itemscope="true" id="top-navbar" itemtype="http://schema.org/WPHeader">
+                        <div class="navbar-inner ">
+                            <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav">
+                                    <li class="first">
+                                        <a href="/app">Home</a>
+                                    </li>
+                                    <li class="divider-vertical">
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="/items" id="drop1" role="button">
+                                            Inventory Items
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul aria-labelledby="drop1" class="dropdown-menu" role="menu">
+                                             <li role="presentation">
+                                                 <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="1">Show Item List</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="/statichtmls/AddItem.html" data-toggle="modal" role="menuitem" tabindex="2">Add Item</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Edit Item</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Delete Item</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Get Report by Item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider-vertical">
+                                    </li><li class="dropdown">
+                                        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="/channel" id="drop2" role="button">
+                                            Online Channel
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul aria-labelledby="drop2" class="dropdown-menu" role="menu">
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Show Channel List</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Add Channel</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Edit Channel Info</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Delete Channel</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Get report by channel</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider-vertical">
+                                    </li><li class="dropdown">
+                                        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="/browse/alarm-accessories" id="drop3" role="button">
+                                            Reports
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul aria-labelledby="drop3" class="dropdown-menu" role="menu">
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Get Itemwise report</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">Get Channelwise report</a>
+                                            </li>
+                                            <li role="presentation"> <a href="/statichtmls/WIP.html" data-toggle="modal" role="menuitem" tabindex="-1">All Reports</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider-vertical">
+                                    </li>
+                                    <li>
+                                        <a href="/statichtmls/WIP.html" data-toggle="modal">Listing Rule</a>
+                                    </li>
+                                    <li class="divider-vertical">
+                                    </li>
+                                    <li>
+                                        <a href="/statichtmls/ContactUs.html" data-toggle="modal">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <form action="/search" class="navbar-form pull-right">
+                                    <input class="search" id="q" name="q" placeholder="Search" type="search">
+                                    <button class="btn" type="submit"><i class="icon-search "></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid" id="slider">
+                <div class="pane_controls">
+                    <a class="close" id="close_charts">×</a>
+  `             </div>
+                <div class="span6" id="itemgrid" style="height: 350px">
+                </div>
+                 <div class="span5" id="channelgrid" style="height: 350px">
+                </div>
+            </div>
+            <div id="body_wrapper">
+                <div class="container-fluid">
+                    <div id="wrapper" data-hook="">
+                        <div class="row-fluid">
+                            <div id="content" class="span12" data-hook="">
+                                <div class="row-fluid" id="home">
+                                        <div class="span8" id="left">
+                                             <div class="all">
+                                                <a href="/statichtmls/WIP.html" data-toggle="modal">View All</a>
+                                            </div>
+                                             <div class="all">
+                                                <a href="/statichtmls/AddItem.html" data-toggle="modal">Add Item</a>
+                                            </div>
+
+                                            <h2>Items</h2>
+                                            <ul id="products" data-hook="" class="inline product-listing thumbnails">
+                                                <li id="product_108" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/items/1" itemprop="url">
+                                                        <img alt="Honeywell L5100PK Close-up in Studio" itemprop="image" src="../newassets/honeywellpk.jpg" >
+                                                            <div class="short_name" itemprop="name"> Honeywell L5100PK
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> L5100 LYNX Touch
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                                eBay Price:
+                                                                <span class="pricing" itemprop="price"> Rs. 3200
+                                                                </span>
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           Amazon Price:
+                                                           <span class="pricing" itemprop="price"> Rs. 3100
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Flipkart Price:
+                                                            <span class="pricing" itemprop="price"> Rs. 3300
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li id="product_54" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/items/2" itemprop="url">
+                                                        <img alt="Toshiba" itemprop="image" src="../newassets/toshiba110.jpg" >
+                                                            <div class="short_name" itemprop="name"> Toshiba Canivo
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> Toshiba Canivo 1 TB
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           Amazon Price:
+                                                           <span class="pricing" itemprop="price"> Rs. 4599
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Flipkart Price:
+                                                            <span class="pricing" itemprop="price"> Rs. 4499
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li id="product_58" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/items/3" itemprop="url">
+                                                        <img alt="Toshiba" itemprop="image" src="../newassets/western_digital.jpg" >
+                                                            <div class="short_name" itemprop="name"> Western Digital 3 TB external HD
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> Western Digital 3 TB external HD
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           Amazon Price:
+                                                           <span class="pricing" itemprop="price"> Rs. 10225
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Flipkart Price:
+                                                            <span class="pricing" itemprop="price"> Rs. 11000
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                           <div class="all">
+
+                                               <a href="/statichtmls/WIP.html" data-toggle="modal">View All</a>
+                                           </div>
+                                             <div class="all">
+                                                <a href="/statichtmls/WIP.html" data-toggle="modal">Add Channel</a>
+                                            </div>
+                                           <h2>Registered Online Channels</h2>
+                                            <ul id="channels" data-hook="" class="inline product-listing thumbnails">
+                                            <li id="channel_1" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/channels/1" itemprop="url">
+                                                        <img alt="Honeywell L5100PK Close-up in Studio" itemprop="image" src="../newassets/ebay11.jpeg" >
+                                                            <div class="short_name" itemprop="name"> eBay India
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> eBay.in
+                                                       </div>
+
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           L5100 LYNX:
+                                                           <span class="pricing" itemprop="price"> 2
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Western Digital:
+                                                            <span class="pricing" itemprop="price"> 8
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li id="channel_2" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/channels/2" itemprop="url">
+                                                        <img alt="Honeywell L5100PK Close-up in Studio" itemprop="image" src="../newassets/flipkart.jpeg" >
+                                                            <div class="short_name" itemprop="name"> Flipkart
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> Flipkart.com
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                                Toshiba Canivo:
+                                                                <span class="pricing" itemprop="price"> 11
+                                                                </span>
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           L5100 LYNX:
+                                                           <span class="pricing" itemprop="price"> 5
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Western Digital:
+                                                            <span class="pricing" itemprop="price"> 2
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li id="channel_3" data-hook="products_list_item" itemscope="" itemtype="http://schema.org/Product" class="span4">
+                                                    <div class="thumbnail">
+                                                        <a href="/channels/3" itemprop="url">
+                                                        <img alt="Honeywell L5100PK Close-up in Studio" itemprop="image" src="../newassets/amazonIN.jpg" >
+                                                            <div class="short_name" itemprop="name"> Amazon
+                                                            </div>
+                                                        </a>
+                                                       <div class="name_description" itemprop="description"> amazon.in
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                                Toshiba Canivo:
+                                                                <span class="pricing" itemprop="price"> 0
+                                                                </span>
+                                                       </div>
+                                                       <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                           <link href="http://schema.org/InStock" itemprop="availability">
+                                                           L5100 LYNX:
+                                                           <span class="pricing" itemprop="price"> 1
+                                                           </span>
+                                                       </div>
+                                                        <div class="our_price" itemscope="true" itemprop="offers" itemtype="schema.org/Offer">
+                                                            <link href="http://schema.org/InStock" itemprop="availability">
+                                                            Western Digital:
+                                                            <span class="pricing" itemprop="price"> 20
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <div class="span4" id="right">
+                                        <div class="blog">
+                                            <h4>Recent Orders</h4>
+                                            <div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+                                                <h5><a href="/channels/1/order/110" itemprop="url"><span itemprop="name">Sold 1 Western Digital 3 TB external HD on eBay</span></a></h5>
+                                                <time datetime="2013-09-02T14:08:00-04:00" itemprop="datePublished">September 02 at 02:08 pm</time>
+                                                <p itemprop="description">Check more on this</p>
+                                            </div>
+                                             <div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+                                                <h5><a href="/channels/2/order/115" itemprop="url"><span itemprop="name">Sold 3 Western Digital 3 TB external HD on Flipkart</span></a></h5>
+                                                <time datetime="2013-09-01T19:08:00-04:00" itemprop="datePublished">September 01 at 07:38 pm</time>
+                                                <p itemprop="description">Check more on this</p>
+                                            </div>
+                                             <div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+                                                <h5><a href="/orders/all" itemprop="url"><span itemprop="name">Click here to view today's orders >></span></a></h5>
+                                            </div>
+                                        </div>
+
+                                         <div class="blog">
+                                            <h4>Channel Insights</h4>
+                                            <div id="market_insight_div" class="post">
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/highcharts.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/charts.min.js"></script>
+
+    </body>
+</html>

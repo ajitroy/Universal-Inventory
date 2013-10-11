@@ -1,0 +1,25 @@
+body{
+    background: url(./body_back.jpg) repeat center 0 #f4f6f4
+}
+
+#outter_wrapper{
+    max-width:1020px;
+    margin:0 auto;
+    padding:0 20px 0 20px
+}
+
+#itemgrid{
+    height: 350px;
+}
+
+.pane_controls {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+/*
+#market_insight_div{
+    max-width: 300px;
+    margin: 0 auto;
+} */
+
